@@ -10,7 +10,7 @@
  });*/
 import _ from 'lodash';
 
-var content = 'It works from content.js';
+var content = 'It works from content.js-';
 var test = '';
 _.each([1, 2, 3, 4, 5, 6, 7, 8, 9], function (vaue, key) {
     console.log(key, vaue);
