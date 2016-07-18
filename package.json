@@ -4,8 +4,12 @@
   "description": "webpack boilerplate",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --watch",
-    "webpack-dev-server": "webpack-dev-server"
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prestart": "npm run build",
+    "start": "webpack-dev-server --content-base dist --inline --hot --open"
   },
   "repository": {
     "type": "git",
@@ -18,7 +22,9 @@
   },
   "homepage": "https://github.com/alelau/webpack-boilerplate#readme",
   "devDependencies": {
+    "rimraf": "2.5.2",
     "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.22.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.17",
     "webpack-dev-server": "^2.1.0-beta.0"
