@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "validate-webpack": "webpack-validator webpack.config.js",
+    "validate-webpack": "webpack-validator ./webpack/dev.config.js",
+    "validate-webpack-prod": "webpack-validator ./webpack/prod.config.js",
     "prebuild": "npm run validate-webpack && npm run clean",
-    "build": "webpack",
-    "watch": "webpack --watch",
+    "prebuild-prod": "npm run validate-webpack-prod && npm run clean",
+    "build": "webpack --config ./webpack/dev.config.js",
+    "build-prod": "webpack -p --config ./webpack/prod.config.js",
+    "watch": "webpack --config ./webpack/dev.config.js --watch",
+    "watch-prod": "webpack -p --config ./webpack/prod.config.js --watch",
     "prestart": "npm run build",
-    "start": "webpack-dev-server --content-base dist --inline --hot --open"
+    "prestart-prod": "npm run build-prod",
+    "start": "webpack-dev-server --content-base dist --inline --hot --open --config ./webpack/dev.config.js",
+    "start-prod": "webpack-dev-server -p --content-base dist --open --config ./webpack/prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -27,14 +33,25 @@
     "angular": "1.5.7"
   },
   "devDependencies": {
+    "babel": "6.5.2",
+    "babel-core": "6.8.0",
+    "babel-eslint": "6.0.4",
+    "babel-loader": "6.2.4",
+    "babel-plugin-__coverage__": "0.111111.11",
+    "babel-preset-es2015-webpack": "6.4.1",
+    "babel-preset-stage-2": "6.5.0",
     "css-loader": "^0.23.1",
+    "eslint": "2.9.0",
+    "eslint-config-kentcdodds": "6.2.1",
+    "eslint-loader": "1.3.0",
     "html-webpack-plugin": "^2.22.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "rimraf": "2.5.2",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.17",
+    "webpack-config": "4.0.0",
     "webpack-dev-server": "^2.1.0-beta.0",
-    "webpack-validator": "2.1.0"
+    "webpack-validator": "2.2.3"
   }
 }

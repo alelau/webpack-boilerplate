@@ -1,0 +1,27 @@
+{
+  "extends": ["kentcdodds/es-next"],
+  "rules": {
+    // these are only here because I did not
+    // want to update the entire codebase ¯\_(ツ)_/¯
+    "func-names": 0,
+    "no-var": 0,
+    "func-style": 0,
+    "comma-dangle": 0,
+    "valid-jsdoc": 0,
+    "vars-on-top": 0,
+    "complexity": [2, 6],
+    //custom conf start
+    "no-undef":1,
+    "indent":1,
+    "no-console":1,
+    "space-before-function-paren":1
+    //custom conf end
+  },
+  "globals": {
+    "jasmine": false,
+    "describe": false,
+    "it": false,
+    "beforeEach": false,
+    "expect": false
+  }
+}
