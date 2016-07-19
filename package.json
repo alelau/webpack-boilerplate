@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "validate-webpack": "webpack-validator webpack.config.js",
-    "prebuild": "npm run validate-webpack & npm run clean",
+    "prebuild": "npm run validate-webpack && npm run clean",
     "build": "webpack",
     "watch": "webpack --watch",
     "prestart": "npm run build",
@@ -22,6 +22,10 @@
     "url": "https://github.com/alelau/webpack-boilerplate/issues"
   },
   "homepage": "https://github.com/alelau/webpack-boilerplate#readme",
+  "dependencies": {
+    "lodash":"4.13.1",
+    "angular": "1.5.7"
+  },
   "devDependencies": {
     "rimraf": "2.5.2",
     "css-loader": "^0.23.1",

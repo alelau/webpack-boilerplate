@@ -4,16 +4,27 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src'
+        app: path.resolve(__dirname, "src"),
+        //vendor: ['lodash']
     },
+    context: path.resolve(__dirname, 'src'),
     plugins: [
         new HtmlWebpackPlugin({
-            template:'./src/index.html'
+            template: './index.html'
+        }),
+        new webpack.ProvidePlugin({
+            "_": "lodash",
+            //"angular": "angular"//this does not work maybe check NgRequirePlugin
         })
+        /*new webpack.optimize.CommonsChunkPlugin({
+         name: 'vendor',
+         filename: 'vendor.[hash].bundle.js'
+         })*/
     ],
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.[hash].js"
+        //filename: "bundle.[chunkhash].js" use un prod
     },
     module: {
         loaders: [
