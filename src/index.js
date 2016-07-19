@@ -1,4 +1,4 @@
-require("./style.css");
+require("!style!css!less!./style.less");
 //document.write(require("./content.js"));
 
 window.myFunction = function () {

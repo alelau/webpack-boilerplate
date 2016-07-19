@@ -23,13 +23,15 @@
   },
   "homepage": "https://github.com/alelau/webpack-boilerplate#readme",
   "dependencies": {
-    "lodash":"4.13.1",
+    "lodash": "4.13.1",
     "angular": "1.5.7"
   },
   "devDependencies": {
-    "rimraf": "2.5.2",
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.22.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "rimraf": "2.5.2",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.17",
     "webpack-dev-server": "^2.1.0-beta.0",
