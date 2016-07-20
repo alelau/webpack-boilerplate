@@ -11,9 +11,7 @@ _.each([1, 2, 3, 4, 5, 6, 7, 8, 9], (vaue, key) => {
  console.log(myModule);*/
 /*console.log(toto);
  */
- angular.module('app', []);
-var version = angular.version.full;
-console.log(angular);
+
 test += version;
 content += test;
 export {content};

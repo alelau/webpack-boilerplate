@@ -14,11 +14,13 @@
     "no-undef":1,
     "indent":["warn", 4],
     "no-console":0,
-    "space-before-function-paren":["warn", "always"],
+    "space-before-function-paren":["off", "always"],
     "space-before-blocks":1,
-    "semi" : ["error", "always"],
+    "semi" : ["error", "always",{ "omitLastInOneLineBlock": true}],
     "eol-last" :0,
-    "no-unused-vars" : 1
+    "no-unused-vars" : 1,
+    "no-invalid-this" : 0,
+    "comma-spacing" : 0
     //custom conf end
   },
   "globals": {

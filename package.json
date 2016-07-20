@@ -29,8 +29,10 @@
   },
   "homepage": "https://github.com/alelau/webpack-boilerplate#readme",
   "dependencies": {
-    "lodash": "4.13.1",
-    "angular": "^1.5.7"
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "html-loader": "^0.4.3",
+    "lodash": "4.13.1"
   },
   "devDependencies": {
     "babel": "6.5.2",

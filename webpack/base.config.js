@@ -1,17 +1,17 @@
 // file : ./webpack/base.config.js
-'use strict'
+'use strict';
 
-const webpack = require('webpack')
-const WebpackConfig = require('webpack-config')
-const path = require('path')
+const webpack = require('webpack');
+const WebpackConfig = require('webpack-config');
+const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NpmCheckPlugin = require('npm-check-webpack-plugin');
 
 module.exports = new WebpackConfig().merge({
     entry: {
-        app: path.resolve("src"),
-        vendor: ['angular','lodash']
+        vendor: ['angular', 'lodash','angular-ui-router'],
+        vindor: path.resolve('src')
     },
     context: path.resolve('src'),
     plugins: [
@@ -20,16 +20,17 @@ module.exports = new WebpackConfig().merge({
             template: './index.html'
         }),
         /*new webpack.ProvidePlugin({
-            "_": "lodash"
-        })*/
+         '_': 'lodash'
+         })*/
     ],
     output: {
-        path: path.resolve("dist")
+        path: path.resolve('dist')
     },
     module: {
         loaders: [
             {test: /\.js$/, loader: 'babel!eslint', exclude: /node_modules/},
-            {test: /\.less$/, loader: "style!css!less", exclude: /node_modules/}
+            {test: /\.less$/, loader: 'style!css!less', exclude: /node_modules/},
+            {test: /\.html$/, loader: 'html'}
         ]
     }
-})
+});
