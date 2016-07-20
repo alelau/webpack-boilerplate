@@ -1,5 +1,11 @@
-<div class="jumbotron">
-    <h1>Hello, {{home.name}}</h1>
-</div>
+<div><h1>Hello, {{$ctrl.name}}</h1>
 
-<button class="btn btn-primary" ng-click="home.changeName()">Change</button>
+    <button class="btn btn-primary" ng-click="$ctrl.changeName()">Change</button>
+
+
+    <input type="text" ng-model="$ctrl.name">
+
+    <p>Transformed : {{$ctrl.transformed()}}</p>
+
+
+</div>
