@@ -13,10 +13,12 @@
     //custom conf start
     "no-undef":1,
     "indent":["warn", 4],
-    "no-console":1,
-    "space-before-function-paren":1,
+    "no-console":0,
+    "space-before-function-paren":["warn", "always"],
     "space-before-blocks":1,
-    "semi" : ["error", "always"]
+    "semi" : ["error", "always"],
+    "eol-last" :0,
+    "no-unused-vars" : 1
     //custom conf end
   },
   "globals": {
@@ -24,6 +26,8 @@
     "describe": false,
     "it": false,
     "beforeEach": false,
-    "expect": false
+    "expect": false,
+    "_":false,
+    "angular":false
   }
 }
