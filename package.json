@@ -10,13 +10,13 @@
     "prebuild": "npm run validate-webpack && npm run clean",
     "prebuild-prod": "npm run validate-webpack-prod && npm run clean",
     "build": "webpack --config ./webpack/dev.config.js",
-    "build-prod": "webpack -p --config ./webpack/prod.config.js",
+    "build-prod": "webpack --config ./webpack/prod.config.js",
     "watch": "webpack --config ./webpack/dev.config.js --watch",
-    "watch-prod": "webpack -p --config ./webpack/prod.config.js --watch",
+    "watch-prod": "webpack --config ./webpack/prod.config.js --watch",
     "prestart": "npm run build",
     "prestart-prod": "npm run build-prod",
     "start": "webpack-dev-server --content-base dist --inline --hot --open --config ./webpack/dev.config.js",
-    "start-prod": "webpack-dev-server -p --content-base dist --open --config ./webpack/prod.config.js"
+    "start-prod": "webpack-dev-server --content-base dist --open --config ./webpack/prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,7 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "rimraf": "2.5.2",
+    "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.17",
     "webpack-config": "4.0.0",
