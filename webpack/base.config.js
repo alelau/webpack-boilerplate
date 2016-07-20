@@ -11,7 +11,7 @@ const NpmCheckPlugin = require('npm-check-webpack-plugin');
 module.exports = new WebpackConfig().merge({
     entry: {
         app: path.resolve("src"),
-        //vendor: ['lodash']
+        vendor: ['angular','lodash']
     },
     context: path.resolve('src'),
     plugins: [
@@ -19,10 +19,9 @@ module.exports = new WebpackConfig().merge({
         new HtmlWebpackPlugin({
             template: './index.html'
         }),
-        new webpack.ProvidePlugin({
-            "_": "lodash",
-            //"angular": "angular"//this does not work maybe check NgRequirePlugin
-        })
+        /*new webpack.ProvidePlugin({
+            "_": "lodash"
+        })*/
     ],
     output: {
         path: path.resolve("dist")
