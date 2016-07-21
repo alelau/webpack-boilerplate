@@ -3,38 +3,38 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
 import homeConfig from './home/';
+import pageConfig from './page/';
 
 import oclazyLoad from 'oclazyload';
-
 
 require('!style!css!less!./style.less');
 //document.write(require("./content.js"));
 
 
 angular.module('app', [uiRouter, oclazyLoad])
-    .config(['$urlRouterProvider', '$stateProvider', ($urlRouterProvider, $stateProvider) => {
-        //$locationProvider.html5Mode(true);
-        $urlRouterProvider.otherwise('/');
-        homeConfig($stateProvider);
- /*       $stateProvider
-            .state('home', {
-                url: '/',
-                template: '<f8-home></f8-home>',
-                resolve: {
-                    loadModule: ['$q','$timeout', '$ocLazyLoad', ($q,$timeout, $ocLazyLoad) => {
-                        return $timeout(function () {
-                           return $q((resolve) => {
-                                require(['./home/index'], (module) => {
-                                    console.log('I loaded',module);
+    .run(['$rootScope', '$state', '$ocLazyLoad', function ($rootScope, $state, $ocLazyLoad) {
+        $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
 
-                                    resolve($ocLazyLoad.load({name: module.default}));
-                                });
-                            });
-                        },2000);
-                    }]
-                }
-            });*/
-    }]);
+            if (toState.data.hasOwnProperty('promise') && !toState.data.promise) {
+                event.preventDefault();
+                toState.data.promise = toState.data.getComponent();
+
+                toState.data.promise.then(function (module) {
+                    $ocLazyLoad.load({name: module.default});
+                    $state.go(toState.name, toParams);
+                });
+            }
+        });
+    }])
+    .config(['$urlRouterProvider', '$stateProvider',
+        ($urlRouterProvider, $stateProvider) => {
+            //$locationProvider.html5Mode(true);
+            $urlRouterProvider.otherwise('/');
+
+
+            homeConfig($stateProvider);
+            pageConfig($stateProvider);
+        }]);
 
 /*
  window.myFunction = function () {

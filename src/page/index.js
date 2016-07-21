@@ -2,15 +2,13 @@ export default function config($stateProvider) {
 
 
     $stateProvider
-        .state('home', {
-            url: '/',
-            template: '<f8-home></f8-home>',
+        .state('page', {
+            url: '/page',
+            template: '<f8-page></f8-page>',
             data: {
 
-                promise: null,
-
                 getComponent: function () {
-                    return System.import('./home');
+                    return System.import('./page');
                 }
             }
         });
