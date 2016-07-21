@@ -6,9 +6,6 @@ export default function config($stateProvider) {
             url: '/',
             template: '<f8-home></f8-home>',
             data: {
-
-                promise: null,
-
                 getComponent: function () {
                     return System.import('./home');
                 }

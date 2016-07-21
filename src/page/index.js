@@ -6,7 +6,6 @@ export default function config($stateProvider) {
             url: '/page',
             template: '<f8-page></f8-page>',
             data: {
-
                 getComponent: function () {
                     return System.import('./page');
                 }

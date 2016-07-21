@@ -1,7 +1,7 @@
 class HomeCtrl {
     constructor($scope, $http) {
         this._default = 'world';
-        this.name = 'Maxime';
+        this.name = 'Alessandro';
         this.$http = $http;
         this.scope = $scope;
 

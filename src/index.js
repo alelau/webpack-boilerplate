@@ -15,14 +15,14 @@ angular.module('app', [uiRouter, oclazyLoad])
     .run(['$rootScope', '$state', '$ocLazyLoad', function ($rootScope, $state, $ocLazyLoad) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
 
-            if (toState.data.hasOwnProperty('promise') && !toState.data.promise) {
+            if (toState.data.hasOwnProperty('getComponent') && !toState.data.promise) {
                 event.preventDefault();
-                toState.data.promise = toState.data.getComponent();
 
-                toState.data.promise.then(function (module) {
+                toState.data.promise = toState.data.getComponent().then(function (module) {
                     $ocLazyLoad.load({name: module.default});
                     $state.go(toState.name, toParams);
                 });
+
             }
         });
     }])
