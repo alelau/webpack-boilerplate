@@ -6,7 +6,7 @@ stdout:
   "warnings": [],
   "version": "2.1.0-beta.19",
   "hash": "6537f9a14f300d559550",
-  "time": 14002,
+  "time": 14208,
   "publicPath": "",
   "assetsByChunkName": {
     "app": "bundle.127635af3235429acd97.js",
@@ -101,8 +101,8 @@ stdout:
           "issuerId": 15,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 472,
-            "building": 532
+            "factory": 519,
+            "building": 617
           },
           "failed": false,
           "errors": 0,
@@ -151,8 +151,8 @@ stdout:
           "issuerId": 10,
           "issuerName": "../~/css-loader!../~/less-loader!./style.less",
           "profile": {
-            "factory": 163,
-            "building": 3
+            "factory": 15,
+            "building": 1
           },
           "failed": false,
           "errors": 0,
@@ -199,8 +199,8 @@ stdout:
           "issuerId": 6,
           "issuerName": "../~/style-loader!../~/css-loader!../~/less-loader!./style.less",
           "profile": {
-            "factory": 430,
-            "building": 412
+            "factory": 583,
+            "building": 39
           },
           "failed": false,
           "errors": 0,
@@ -247,9 +247,9 @@ stdout:
           "issuerId": 15,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 33,
-            "building": 506,
-            "dependencies": 359
+            "factory": 504,
+            "building": 98,
+            "dependencies": 496
           },
           "failed": false,
           "errors": 0,
@@ -289,8 +289,8 @@ stdout:
           "issuerId": 15,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 459,
-            "building": 12
+            "factory": 514,
+            "building": 3
           },
           "failed": false,
           "errors": 0,
@@ -328,8 +328,8 @@ stdout:
           "issuerId": 4,
           "issuerName": "./home/index.js",
           "profile": {
-            "factory": 367,
-            "building": 544
+            "factory": 498,
+            "building": 167
           },
           "failed": false,
           "errors": 0,
@@ -369,8 +369,8 @@ stdout:
           "issuerId": 12,
           "issuerName": "../~/style-loader!../~/css-loader!../~/less-loader!./home/home.less",
           "profile": {
-            "factory": 2,
-            "building": 540,
+            "factory": 1,
+            "building": 311,
             "dependencies": 3
           },
           "failed": false,
@@ -409,8 +409,8 @@ stdout:
           "issuerId": 6,
           "issuerName": "../~/style-loader!../~/css-loader!../~/less-loader!./style.less",
           "profile": {
-            "factory": 75,
-            "building": 757
+            "factory": 92,
+            "building": 793
           },
           "failed": false,
           "errors": 0,
@@ -448,8 +448,8 @@ stdout:
           "issuerId": 4,
           "issuerName": "./home/index.js",
           "profile": {
-            "factory": 386,
-            "building": 540
+            "factory": 503,
+            "building": 310
           },
           "failed": false,
           "errors": 0,
@@ -487,9 +487,9 @@ stdout:
           "issuerId": 4,
           "issuerName": "./home/index.js",
           "profile": {
-            "factory": 374,
-            "building": 8,
-            "dependencies": 4
+            "factory": 499,
+            "building": 1,
+            "dependencies": 2
           },
           "failed": false,
           "errors": 0,
@@ -527,9 +527,9 @@ stdout:
           "issuerId": null,
           "issuerName": null,
           "profile": {
-            "factory": 33,
-            "building": 1175,
-            "dependencies": 0
+            "factory": 347,
+            "building": 1064,
+            "dependencies": 1
           },
           "failed": false,
           "errors": 0,
@@ -587,8 +587,8 @@ stdout:
           "issuerId": 16,
           "issuerName": "multi vendor",
           "profile": {
-            "factory": 30,
-            "building": 584
+            "factory": 25,
+            "building": 16
           },
           "failed": false,
           "errors": 0,
@@ -634,8 +634,8 @@ stdout:
           "issuerId": 16,
           "issuerName": "multi vendor",
           "profile": {
-            "factory": 27,
-            "building": 585
+            "factory": 28,
+            "building": 318
           },
           "failed": false,
           "errors": 0,
@@ -672,8 +672,8 @@ stdout:
           "issuerId": 0,
           "issuerName": "../~/angular/index.js",
           "profile": {
-            "factory": 602,
-            "building": 443
+            "factory": 774,
+            "building": 1089
           },
           "failed": false,
           "errors": 0,
@@ -711,8 +711,8 @@ stdout:
           "issuerId": 5,
           "issuerName": "../~/lodash/lodash.js",
           "profile": {
-            "factory": 1050,
-            "building": 452
+            "factory": 473,
+            "building": 1096
           },
           "failed": false,
           "errors": 0,
@@ -750,8 +750,8 @@ stdout:
           "issuerId": 5,
           "issuerName": "../~/lodash/lodash.js",
           "profile": {
-            "factory": 1050,
-            "building": 451
+            "factory": 473,
+            "building": 1095
           },
           "failed": false,
           "errors": 0,
@@ -790,7 +790,7 @@ stdout:
           "issuerName": null,
           "profile": {
             "factory": 0,
-            "building": 0
+            "building": 1
           },
           "failed": false,
           "errors": 0,
@@ -833,8 +833,8 @@ stdout:
       "issuerId": 16,
       "issuerName": "multi vendor",
       "profile": {
-        "factory": 30,
-        "building": 584
+        "factory": 25,
+        "building": 16
       },
       "failed": false,
       "errors": 0,
@@ -880,8 +880,8 @@ stdout:
       "issuerId": 15,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 472,
-        "building": 532
+        "factory": 519,
+        "building": 617
       },
       "failed": false,
       "errors": 0,
@@ -930,8 +930,8 @@ stdout:
       "issuerId": 10,
       "issuerName": "../~/css-loader!../~/less-loader!./style.less",
       "profile": {
-        "factory": 163,
-        "building": 3
+        "factory": 15,
+        "building": 1
       },
       "failed": false,
       "errors": 0,
@@ -978,8 +978,8 @@ stdout:
       "issuerId": 6,
       "issuerName": "../~/style-loader!../~/css-loader!../~/less-loader!./style.less",
       "profile": {
-        "factory": 430,
-        "building": 412
+        "factory": 583,
+        "building": 39
       },
       "failed": false,
       "errors": 0,
@@ -1026,9 +1026,9 @@ stdout:
       "issuerId": 15,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 33,
-        "building": 506,
-        "dependencies": 359
+        "factory": 504,
+        "building": 98,
+        "dependencies": 496
       },
       "failed": false,
       "errors": 0,
@@ -1068,8 +1068,8 @@ stdout:
       "issuerId": 16,
       "issuerName": "multi vendor",
       "profile": {
-        "factory": 27,
-        "building": 585
+        "factory": 28,
+        "building": 318
       },
       "failed": false,
       "errors": 0,
@@ -1106,8 +1106,8 @@ stdout:
       "issuerId": 15,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 459,
-        "building": 12
+        "factory": 514,
+        "building": 3
       },
       "failed": false,
       "errors": 0,
@@ -1145,8 +1145,8 @@ stdout:
       "issuerId": 0,
       "issuerName": "../~/angular/index.js",
       "profile": {
-        "factory": 602,
-        "building": 443
+        "factory": 774,
+        "building": 1089
       },
       "failed": false,
       "errors": 0,
@@ -1184,8 +1184,8 @@ stdout:
       "issuerId": 4,
       "issuerName": "./home/index.js",
       "profile": {
-        "factory": 367,
-        "building": 544
+        "factory": 498,
+        "building": 167
       },
       "failed": false,
       "errors": 0,
@@ -1225,8 +1225,8 @@ stdout:
       "issuerId": 12,
       "issuerName": "../~/style-loader!../~/css-loader!../~/less-loader!./home/home.less",
       "profile": {
-        "factory": 2,
-        "building": 540,
+        "factory": 1,
+        "building": 311,
         "dependencies": 3
       },
       "failed": false,
@@ -1265,8 +1265,8 @@ stdout:
       "issuerId": 6,
       "issuerName": "../~/style-loader!../~/css-loader!../~/less-loader!./style.less",
       "profile": {
-        "factory": 75,
-        "building": 757
+        "factory": 92,
+        "building": 793
       },
       "failed": false,
       "errors": 0,
@@ -1304,8 +1304,8 @@ stdout:
       "issuerId": 4,
       "issuerName": "./home/index.js",
       "profile": {
-        "factory": 386,
-        "building": 540
+        "factory": 503,
+        "building": 310
       },
       "failed": false,
       "errors": 0,
@@ -1343,9 +1343,9 @@ stdout:
       "issuerId": 4,
       "issuerName": "./home/index.js",
       "profile": {
-        "factory": 374,
-        "building": 8,
-        "dependencies": 4
+        "factory": 499,
+        "building": 1,
+        "dependencies": 2
       },
       "failed": false,
       "errors": 0,
@@ -1383,8 +1383,8 @@ stdout:
       "issuerId": 5,
       "issuerName": "../~/lodash/lodash.js",
       "profile": {
-        "factory": 1050,
-        "building": 452
+        "factory": 473,
+        "building": 1096
       },
       "failed": false,
       "errors": 0,
@@ -1422,8 +1422,8 @@ stdout:
       "issuerId": 5,
       "issuerName": "../~/lodash/lodash.js",
       "profile": {
-        "factory": 1050,
-        "building": 451
+        "factory": 473,
+        "building": 1095
       },
       "failed": false,
       "errors": 0,
@@ -1461,9 +1461,9 @@ stdout:
       "issuerId": null,
       "issuerName": null,
       "profile": {
-        "factory": 33,
-        "building": 1175,
-        "dependencies": 0
+        "factory": 347,
+        "building": 1064,
+        "dependencies": 1
       },
       "failed": false,
       "errors": 0,
@@ -1492,7 +1492,7 @@ stdout:
       "issuerName": null,
       "profile": {
         "factory": 0,
-        "building": 0
+        "building": 1
       },
       "failed": false,
       "errors": 0,
@@ -1562,8 +1562,8 @@ stdout:
               "issuerId": null,
               "issuerName": null,
               "profile": {
-                "factory": 623,
-                "building": 612
+                "factory": 665,
+                "building": 169
               },
               "failed": false,
               "errors": 0,
@@ -1606,8 +1606,8 @@ stdout:
           "issuerId": null,
           "issuerName": null,
           "profile": {
-            "factory": 623,
-            "building": 612
+            "factory": 665,
+            "building": 169
           },
           "failed": false,
           "errors": 0,

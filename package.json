@@ -16,7 +16,7 @@
     "prestart": "npm run build",
     "prestart-prod": "npm run build-prod",
     "start": "webpack-dev-server --content-base dist --inline --hot --open --config ./webpack/dev.config.js",
-    "start-prod": "webpack-dev-server --content-base dist --open --config ./webpack/prod.config.js"
+    "start-prod": "webpack-dev-server --content-base dist --open --config ./webpack/prod.config.js --cache=false"
   },
   "repository": {
     "type": "git",
