@@ -26,7 +26,9 @@ module.exports = (new WebpackConfig()).extend('./webpack/base.config.js').merge(
             minimize: true,
             debug: false,
             quiet: true
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin({name:"vendor", filename:"bundle.[chunkhash].js"})
+
     ]
 
 })

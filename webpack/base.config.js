@@ -10,8 +10,8 @@ const NpmCheckPlugin = require('npm-check-webpack-plugin');
 
 module.exports = new WebpackConfig().merge({
     entry: {
-        vendor: ['angular', 'lodash','angular-ui-router'],
-        vindor: path.resolve('src')
+        vendor: ['angular', 'lodash'],
+        app: path.resolve('src')
     },
     context: path.resolve('src'),
     plugins: [
