@@ -1,15 +1,12 @@
-export default function config($stateProvider) {
+import HomeController from './controller';
 
+import contactState from './contact/state';
+require('!style!css!less!./style.less');
 
-    $stateProvider
-        .state('home', {
-            url: '/',
-            template: '<f8-home></f8-home>',
-            data: {
-                getComponent: function () {
-                    return System.import('./home');
-                }
-            }
-        });
+export default angular.module('app.home', [contactState])
 
-}
+    .component('f8Home', {
+        template: require('./template.html'),
+        controller: HomeController
+    })
+    .name;

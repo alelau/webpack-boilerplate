@@ -1,15 +1,16 @@
-export default function config($stateProvider) {
+require('!style!css!less!./style.less');
 
+export default angular.module('app.page', [])
 
-    $stateProvider
-        .state('page', {
-            url: '/page',
-            template: '<f8-page></f8-page>',
-            data: {
-                getComponent: function () {
-                    return System.import('./page');
-                }
-            }
-        });
+    .component('f8Page', {
+        template: '<div class="page">THe page <a ui-sref="home">Back home</a>   <a ui-sref="bob">fo bob</a></div>',
+    })
 
-}
+    .config(['$stateProvider', function ($stateProvider) {
+        $stateProvider
+            .state('bob', {
+                url: '/bob',
+                template: '<div>bob</div>'
+            });
+    }])
+    .name;
