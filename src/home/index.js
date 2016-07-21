@@ -1,18 +1,22 @@
-import uiRouter from 'angular-ui-router';
-import HomeController from './home.controller';
+export default function config($stateProvider) {
 
-require('!style!css!less!./home.less');
 
-export default angular.module('app.home', [uiRouter])
-    .config(['$stateProvider', ($stateProvider) => {
-        $stateProvider
-            .state('home', {
-                url: '/',
-                template: '<f8-home></f8-home>'
-            });
-    }])
-    .component('f8Home', {
-        template: require('./home.html'),
-        controller: HomeController
-    })
-    .name;
+    $stateProvider
+        .state('home', {
+            url: '/',
+            template: '<f8-home></f8-home>',
+            resolve: {
+                loadModule: ['$q', '$timeout', '$ocLazyLoad', ($q, $timeout, $ocLazyLoad) => {
+                    return $timeout(function () {
+                        return $q((resolve) => {
+                            require(['./home.component'], (module) => {
+                                console.log('I loaded', module);
+                                resolve($ocLazyLoad.load({name: module.default}));
+                            });
+                        });
+                    }, 2000);
+                }]
+            }
+        });
+
+}

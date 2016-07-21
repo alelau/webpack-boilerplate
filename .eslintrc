@@ -20,7 +20,8 @@
     "eol-last" :0,
     "no-unused-vars" : 1,
     "no-invalid-this" : 0,
-    "comma-spacing" : 0
+    "comma-spacing" : 0,
+    "no-debugger" : 1
     //custom conf end
   },
   "globals": {
