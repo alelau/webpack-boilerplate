@@ -5,7 +5,7 @@ require('!style!css!less!./style.less');
 export default angular.module('app.page', [extensibleBar])
 
     .component('f8Page', {
-        template: '<extensible-bar></extensible-bar>',
+        template: require('./template.html')
     })
 
     .config(['$stateProvider', function ($stateProvider) {

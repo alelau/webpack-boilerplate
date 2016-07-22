@@ -1,4 +1,6 @@
-<div>
-    <div>Left Panel</div>
-    <div>Right Panel</div>
+<div class="extensible-panel" side="left">
+
+    <div class="user-content" ng-transclude="leftPanel"></div>
+    <div class="footer-content">Bottom</div>
 </div>
+<div class="extensible-panel" side="right" ng-transclude="rightPanel"></div>

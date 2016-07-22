@@ -1,9 +1,8 @@
 import HomeController from './controller';
 
-import contactState from './contact/state';
 require('!style!css!less!./style.less');
 
-export default angular.module('app.home', [contactState])
+export default angular.module('app.home', [])
 
     .component('f8Home', {
         template: require('./template.html'),

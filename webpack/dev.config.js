@@ -5,7 +5,7 @@ const WebpackConfig = require('webpack-config')
 const webpack = require('webpack')
 
 module.exports = new WebpackConfig().extend('./webpack/base.config.js').merge({
-    devtool: '#cheap-module-eval-source-map',
+    devtool: 'cheap-module-eval-source-map',
     output: {
         filename: "[name].[hash].js"
     },
