@@ -1,18 +1,12 @@
-import extensibleBar from '../extensible-bar';
-
 require('!style!css!less!./style.less');
+console.log('yea');
 
-export default angular.module('app.page', [extensibleBar])
+export default angular.module('app.page', [])
 
     .component('f8Page', {
+        bindings: {
+            hour: '@'
+        },
         template: require('./template.html')
     })
-
-    .config(['$stateProvider', function ($stateProvider) {
-        $stateProvider
-            .state('bob', {
-                url: '/bob',
-                template: '<div>bob</div>'
-            });
-    }])
     .name;

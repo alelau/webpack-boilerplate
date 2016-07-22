@@ -8,7 +8,7 @@ extensible-bar {
   display: flex;
 
 
-  > .extensible-panel{
+  > .extensible-panel {
     outline: 1px solid black;
     position: relative;
 
@@ -17,24 +17,53 @@ extensible-bar {
     display: flex;
     flex-direction: column;
 
-    &[side="left"]{
+    &[side="left"] {
       flex-grow: 0;
-      overflow-x:hidden;
-      overflow-y:auto;
-      .user-content{
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      transition: 5s ease all;
+
+      .user-content {
         flex-grow: 1;
+
+
+
+
+   /*     > div{
+          transition: 0.5s ease all;
+          &.ng-enter{
+            opacity: 0;
+          }
+          &.ng-enter.ng-enter-active{
+            opacity: 1;
+            overflow-x: hidden;
+            white-space: nowrap;
+          }
+
+          &.ng-leave{
+            opacity: 1;
+          }
+          &.ng-leave.ng-leave-active{
+            opacity: 0;
+            overflow-x: hidden;
+            white-space: nowrap;
+          }
+        }*/
+
+
       }
-      .footer-content{
+      .footer-content {
         margin: 0 auto;
         flex-grow: 0;
         padding: 30px;
       }
 
     }
-    &[side="right"]{
+    &[side="right"] {
       flex-grow: 1;
-      overflow-y:auto;
-      overflow-x:auto;
+      overflow-y: auto;
+      overflow-x: auto;
     }
   }
 

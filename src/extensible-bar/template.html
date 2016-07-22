@@ -1,6 +1,15 @@
-<div class="extensible-panel" side="left">
+<div class="extensible-panel" side="left"
+     ng-style="{width : link.isExpanded ? link.expandedWidth : link.collapsedWith  }">
 
-    <div class="user-content" ng-transclude="leftPanel"></div>
-    <div class="footer-content">Bottom</div>
+
+    <div class="user-content" ng-class="{'expanded' : link.isExpanded}">
+        <div ng-if="link.isExpanded || !link.useCollapseTemplate" class="expanded-template"
+             ng-transclude="leftPanel"></div>
+        <div ng-if="!link.isExpanded && link.useCollapseTemplate" class="collapsed-template"
+             ng-transclude="leftPanelCollapsed"></div>
+    </div>
+    <div ng-if="useManualCollapse" class="footer-content">
+        <button ng-click="link.isExpanded = !link.isExpanded">Action</button>
+    </div>
 </div>
 <div class="extensible-panel" side="right" ng-transclude="rightPanel"></div>

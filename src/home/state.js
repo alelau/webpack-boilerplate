@@ -1,6 +1,8 @@
+import page from '../page/state';
+
 import ocLazyLoad from 'oclazyload';
 
-export default angular.module('app.home.state', [ocLazyLoad])
+export default angular.module('app.home.state', [ocLazyLoad,page])
     .config(['$stateProvider', ($stateProvider) => {
         $stateProvider
             .state('home', {

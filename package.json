@@ -15,7 +15,7 @@
     "watch-prod": "webpack --config ./webpack/prod.config.js --watch",
     "prestart": "npm run build",
     "prestart-prod": "npm run build-prod",
-    "start": "webpack-dev-server --content-base dist --inline --hot --open --config ./webpack/dev.config.js",
+    "start": "webpack-dev-server --content-base dist --inline --hot --open --config ./webpack/dev.config.js --host 0.0.0.0",
     "start-prod": "webpack-dev-server --content-base dist --open --config ./webpack/prod.config.js --cache=false"
   },
   "repository": {
@@ -30,6 +30,7 @@
   "homepage": "https://github.com/alelau/webpack-boilerplate#readme",
   "dependencies": {
     "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
     "angular-ui-router": "^0.3.1",
     "html-loader": "^0.4.3",
     "lodash": "4.13.1",

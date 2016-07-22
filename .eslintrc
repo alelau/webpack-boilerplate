@@ -14,6 +14,7 @@
     "no-undef":1,
     "indent":["warn", 4],
     "no-console":0,
+    "max-len" : 1,
     "space-before-function-paren":["off", "always"],
     "space-before-blocks":1,
     "semi" : ["error", "always",{ "omitLastInOneLineBlock": true}],

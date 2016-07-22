@@ -1,21 +1,35 @@
-<div><h1>Hello, {{$ctrl.name}}</h1>
+<extensible-bar use-manual-collapse="true">
+    <left-panel>
+        <div style="padding: 5px;background: blue;height: 50px;">exp</div>
+    </left-panel>
+    <left-panel-collapsed>
 
-    <button class="btn btn-primary" ng-click="$ctrl.changeName()">Change</button>
+        <div style="padding: 5px;background: #ff4f46;height: 100px;">a</div>
 
+    </left-panel-collapsed>
+    <right-panel>
 
-    <input type="text" ng-model="$ctrl.name">
-
-    <p>Transformed : {{$ctrl.transformed()}}</p>
-
-
-    <a ui-sref="page">Go to page</a>
-
-
-    <p><a ui-sref="home.contact">Contact</a>:</p>
-
-
-    <fieldset>
-        <ui-view></ui-view>
-    </fieldset>
-
-</div>
+        <extensible-bar use-manual-collapse="true">
+            <left-panel>
+                Im on the sub left
+            </left-panel>
+            <right-panel class="main-content">
+                <ui-view></ui-view>
+            </right-panel>
+        </extensible-bar>
+        <!-- <div style="display: flex;flex-direction: column;height: 100%">
+             <div style="background: yellow;">Header</div>
+             <div style="position: relative;flex: 1 1 auto">
+                 <extensible-bar>
+                     <left-panel>
+                         Im on the sub left
+                     </left-panel>
+                     <right-panel>
+                         Hello <br>
+                         ddddd
+                     </right-panel>
+                 </extensible-bar>
+             </div>
+         </div>-->
+    </right-panel>
+</extensible-bar>
