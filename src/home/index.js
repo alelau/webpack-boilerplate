@@ -1,7 +1,7 @@
 import HomeController from './controller';
 
 import contactState from './contact/state';
-require('!style!css!less!./style.less');
+require('./style.less');
 
 export default angular.module('app.home', [contactState])
 
